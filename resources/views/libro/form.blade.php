@@ -10,7 +10,7 @@
 
         <div class="form-group">
             {{ Form::label('editorial_id') }}
-            {{ Form::select('editorial_id', $editoriale , $libro->editorial_id, ['class' => 'form-control' . ($errors->has('categoria_id') ? ' is-invalid' : ''), 'placeholder' => 'Editorial id Id']) }}
+            {{ Form::select('editorial_id', $editoriale , $libro->editorial_id, ['class' => 'form-control' . ($errors->has('categoria_id') ? ' is-invalid' : ''), 'placeholder' => 'Editorial id']) }}
             {!! $errors->first('editorial_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

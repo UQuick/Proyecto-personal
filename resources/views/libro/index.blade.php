@@ -48,8 +48,8 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $libro->categoria_id }}</td>
-											<td>{{ $libro->editorial_id }}</td>
+											<td>{{ $libro->categoria->nombre }}</td>
+											<td>{{ $libro->editoriale->nombre }}</td>
 											<td>{{ $libro->nombre }}</td>
 
                                             <td>
