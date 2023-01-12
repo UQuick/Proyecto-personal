@@ -4,6 +4,23 @@
     Categoria
 @endsection
 
+<script type="text/javascript">
+  function ConfirmDelete()
+
+     { var respuesta = confirm("¿Seguro de eliminar el elemento?")
+
+       if (respuesta == true) {
+
+         return true;
+       }
+    else
+       {
+         return false;    
+       }
+     }
+
+    </script>
+
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -54,7 +71,7 @@
                                                     <a class="btn btn-sm btn-success" href="{{ route('categorias.edit',$categoria->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return ConfirmDelete()"><i class="fa fa-fw fa-trash"></i> Delete</button>
                                                 </form>
                                             </td>
                                         </tr>
