@@ -36,8 +36,8 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Categoria Id</th>
-										<th>Editorial Id</th>
+										<th>Categoria</th>
+										<th>Editorial</th>
 										<th>Nombre</th>
 
                                         <th></th>

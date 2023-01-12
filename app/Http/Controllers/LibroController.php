@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Libro;
+use App\Models\Categoria;
+use App\Models\Editoriale;
 use Illuminate\Http\Request;
+
 
 /**
  * Class LibroController
@@ -32,7 +35,15 @@ class LibroController extends Controller
     public function create()
     {
         $libro = new Libro();
-        return view('libro.create', compact('libro'));
+
+        $categorias = Categoria::pluck('nombre','id');
+
+        $editoriale = Editoriale::pluck('nombre','id');
+
+        return view('libro.create', compact('libro','categorias', 'editoriale'));
+
+  
+
     }
 
     /**
@@ -73,8 +84,12 @@ class LibroController extends Controller
     public function edit($id)
     {
         $libro = Libro::find($id);
+        
+        $categorias = Categoria::pluck('nombre','id');
 
-        return view('libro.edit', compact('libro'));
+        $editoriale = Editoriale::pluck('nombre','id');
+
+        return view('libro.create', compact('libro','categorias', 'editoriale'));
     }
 
     /**
